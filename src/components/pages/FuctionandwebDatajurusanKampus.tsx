@@ -71,75 +71,67 @@ export function CampusCard({ campus }: CampusCardProps) {
             <GraduationCap className="w-4 h-4" />
             <span className="text-sm">Program Studi ({campus.programStudi.length})</span>
           </div>
-          {/* Program Studi Section */}
-          <div className="space-y-2">
-            <div className="flex items-center gap-2 text-gray-700">
-              <GraduationCap className="w-4 h-4" />
-              <span className="text-sm">Program Studi ({campus.programStudi.length})</span>
-            </div>
 
-            {(() => {
-              const [showAll, setShowAll] = useState(false);
-              const displayed = showAll
-                ? campus.programStudi
-                : campus.programStudi.slice(0, 5);
+          {(() => {
+            const [showAll, setShowAll] = useState(false);
+            const displayed = showAll
+              ? campus.programStudi
+              : campus.programStudi.slice(0, 5);
 
-              return (
-                <>
-                  {/* LIST PROGRAM STUDI */}
-                  <div className="flex flex-wrap gap-2">
-                    {displayed.map((prodi, index) => (
-                      <div key={index} className="group relative">
-                        <Badge
-                          variant="secondary"
-                          className="cursor-help hover:bg-gray-200 transition-colors"
-                        >
-                          {prodi.nama}
-                          <Award
-                            className={`ml-1.5 w-3 h-3 ${
-                              prodi.akreditasi === 'A'
-                                ? 'text-green-600'
-                                : prodi.akreditasi === 'B'
-                                ? 'text-blue-600'
-                                : 'text-yellow-600'
-                            }`}
-                          />
-                        </Badge>
+            return (
+              <>
+                {/* LIST PROGRAM STUDI */}
+                <div className="flex flex-wrap gap-2">
+                  {displayed.map((prodi, index) => (
+                    <div key={index} className="group relative">
+                      <Badge
+                        variant="secondary"
+                        className="cursor-help hover:bg-gray-200 transition-colors"
+                      >
+                        {prodi.nama}
+                        <Award
+                          className={`ml-1.5 w-3 h-3 ${
+                            prodi.akreditasi === 'A'
+                              ? 'text-green-600'
+                              : prodi.akreditasi === 'B'
+                              ? 'text-blue-600'
+                              : 'text-yellow-600'
+                          }`}
+                        />
+                      </Badge>
 
-                        {/* Tooltip */}
-                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10 shadow-lg">
-                          <div className="space-y-1">
-                            <div>{prodi.fakultas}</div>
-                            <div>Akreditasi: {prodi.akreditasi}</div>
-                          </div>
-                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-900"></div>
+                      {/* Tooltip */}
+                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10 shadow-lg">
+                        <div className="space-y-1">
+                          <div>{prodi.fakultas}</div>
+                          <div>Akreditasi: {prodi.akreditasi}</div>
                         </div>
+                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-900"></div>
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  ))}
+                </div>
 
-                  {/* TOMBOL EXPAND / COLLAPSE */}
-                  {campus.programStudi.length > 5 && (
-                    <button
-                      onClick={() => setShowAll(!showAll)}
-                      className="flex items-center gap-1 text-indigo-600 font-medium mt-2 hover:text-indigo-700 transition"
-                    >
-                      {showAll ? (
-                        <>
-                          Sembunyikan <ChevronUp size={16} />
-                        </>
-                      ) : (
-                        <>
-                          Lihat Semua ({campus.programStudi.length}) <ChevronDown size={16} />
-                        </>
-                      )}
-                    </button>
-                  )}
-                </>
-              );
-            })()}
-          </div>
-
+                {/* TOMBOL EXPAND / COLLAPSE */}
+                {campus.programStudi.length > 5 && (
+                  <button
+                    onClick={() => setShowAll(!showAll)}
+                    className="flex items-center gap-1 text-indigo-600 font-medium mt-2 hover:text-indigo-700 transition"
+                  >
+                    {showAll ? (
+                      <>
+                        Sembunyikan <ChevronUp size={16} />
+                      </>
+                    ) : (
+                      <>
+                        Lihat Semua ({campus.programStudi.length}) <ChevronDown size={16} />
+                      </>
+                    )}
+                  </button>
+                )}
+              </>
+            );
+          })()}
         </div>
 
         {/* Contact Info */}
