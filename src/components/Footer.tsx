@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Twitter, Youtube, Mail } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const navigate = useNavigate();
@@ -103,24 +104,24 @@ export default function Footer() {
             <h3 className="mb-4">Kategori Panduan</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/ktp-sim" className="text-gray-400 hover:text-[#3B82F6] transition-colors">
+                <Link to="/ktp-sim" className="text-gray-400 hover:text-[#3B82F6] transition-colors">
                   KTP & SIM
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/persiapan-kuliah" className="text-gray-400 hover:text-[#3B82F6] transition-colors">
+                <Link to="/persiapan-kuliah" className="text-gray-400 hover:text-[#3B82F6] transition-colors">
                   Persiapan Kuliah
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/persiapan-karir" className="text-gray-400 hover:text-[#3B82F6] transition-colors">
+                <Link to="/persiapan-karir" className="text-gray-400 hover:text-[#3B82F6] transition-colors">
                   Perencanaan Karier
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/belajar-efektif" className="text-gray-400 hover:text-[#3B82F6] transition-colors">
+                <Link to="/belajar-efektif" className="text-gray-400 hover:text-[#3B82F6] transition-colors">
                   Belajar Efektif
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
