@@ -19,7 +19,7 @@ export default function Hero({ onScrollToSection }: HeroProps) {
             </div>
             
             <h1 className="text-gray-900">
-              Panduan SMA: Sukses Menyongsong Masa Depan
+              PASMA: Sukses Menyongsong Masa Depan
             </h1>
             
             <p className="text-gray-600 max-w-xl">

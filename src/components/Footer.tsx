@@ -22,7 +22,7 @@ export default function Footer() {
               <div className="w-8 h-8 bg-[#3B82F6] rounded-lg flex items-center justify-center">
                 <span>📚</span>
               </div>
-              <span>Panduan SMA</span>
+              <span>PASMA</span>
             </div>
             <p className="text-gray-400">
               Platform edukasi modern untuk membantu siswa SMA meraih masa depan yang cerah.

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import image1 from "../Images/PanduanKesehatanMental_1.jpg";
 import image2 from "../Images/PanduanKesehatanMental_2.jpg";
 import image3 from "../Images/PanduanKesehatanMental_3.jpg";
+import image4 from "../Images/PanduanKesehatanMental_4.jpg"
 import { Breadcrumb } from "./BelajarEfektif/Breadcrumb";
 
 export default function PanduanKesehatanMental() {
@@ -78,6 +79,11 @@ export default function PanduanKesehatanMental() {
                 <p className="text-gray-600">
                   Lengkapi data diri sesuai dengan informasi yang diminta
                 </p>
+                <img 
+                  src={image3} 
+                  alt="Halaman mengisi data" 
+                  className="w-full rounded-lg shadow-lg mb-3 sm:mb-4"
+                />
               </div>
             </div>
           </div>
@@ -94,8 +100,8 @@ export default function PanduanKesehatanMental() {
                   Jika sudah login, maka akan muncul halaman ini
                 </p>
                 <img 
-                  src={image3} 
-                  alt="Halaman setelah login" 
+                  src={image4} 
+                  alt="Halaman setelah login dan mengisi data" 
                   className="w-full rounded-lg shadow-lg mb-3 sm:mb-4"
                 />
                 <div className="bg-purple-50 border border-purple-200 rounded-lg p-3 sm:p-4 space-y-2 sm:space-y-3">
