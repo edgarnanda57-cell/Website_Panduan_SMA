@@ -35,7 +35,7 @@ export function CareerCard({ career, isLoading = false }: CareerCardProps) {
 
   return (
     <div
-      onClick={() => navigate(`/karier/${career.id}`)}
+      onClick={() => navigate(`/persiapan-karir/${career.id}`)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => {
         setIsHovered(false);
