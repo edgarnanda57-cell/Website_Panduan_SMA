@@ -146,7 +146,7 @@ export default function PanduanSIMPage() {
                           className="mt-4 !bg-blue-600 !text-white hover:!bg-blue-700"
                         >
                           <MapPin className="w-4 h-4 mr-2" />
-                            Cari Lokasi Dukcapil
+                            Cari Lokasi Satpas Polri
                         </Button>
                       )}
                     </div>
