@@ -15,7 +15,7 @@ export default function JurusanList() {
     { label: "Home", href: "/" },
     { label: "Jurusan" },
   ];
-
+  const url = "https://campus.quipper.com/majors";
   // Get unique types
   const types = useMemo(() => {
     const typeSet = new Set(jurusanData.map((j) => j.Type));
@@ -119,7 +119,17 @@ export default function JurusanList() {
                 className={`w-full ${isSticky ? "pl-12 pr-4 py-2.5 text-sm" : "pl-14 pr-6 py-4"} bg-white border-2 border-[#E0D4F7] rounded-full focus:outline-none focus:border-[#7E57C2] focus:shadow-[0_0_0_4px_rgba(126,87,194,0.1)] transition-all duration-200`}
               />
             </div>
-
+            <div className="text-gray-500 text-xs">
+              Sumber:{' '}
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-gray-600"
+              >
+                {url}
+              </a>
+            </div>
             {/* Filter Section */}
             <div className={`flex items-center gap-3 flex-wrap ${isSticky ? "mb-2" : ""}`}>
               <div className="flex items-center gap-2 text-gray-600">

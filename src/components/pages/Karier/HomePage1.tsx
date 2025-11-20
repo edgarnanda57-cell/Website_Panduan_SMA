@@ -11,7 +11,7 @@ export default function HomePage1() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedType, setSelectedType] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-
+  const url = "https://campus.quipper.com/careers";
   // Get unique types for filter
   const types = useMemo(() => {
     const uniqueTypes = [...new Set(careerData.map(career => career.Type))];
@@ -110,6 +110,17 @@ export default function HomePage1() {
                 <p className="text-[#777777]">
                   {isLoading ? 'Mencari...' : `${filteredCareers.length} pekerjaan ditemukan`}
                 </p>
+                <div className="text-gray-500 text-xs">
+                  Sumber:{' '}
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-gray-600"
+                  >
+                    {url}
+                  </a>
+                </div>
               </div>
             </div>
 

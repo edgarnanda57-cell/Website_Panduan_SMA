@@ -37,6 +37,7 @@ export default function JurusanKampus() {
   const [hasMore, setHasMore] = useState(true);
   const observerTarget = useRef(null);
   const navigate = useNavigate();
+  const url = "https://campus.quipper.com/directory";
   // Get unique values for filters
   const jurusanList = Array.from(
     new Set(sortedJurusan.flatMap(item => item.JurusanListKampus))
@@ -232,7 +233,17 @@ export default function JurusanKampus() {
           <div className="mb-4 text-gray-600">
             Menampilkan {displayedData.length} dari {getFilteredData().length} kampus
           </div>
-
+          <div className="text-gray-500 text-xs">
+            Sumber:{' '}
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-gray-600"
+            >
+              {url}
+            </a>
+          </div>
           {/* Campus Cards */}
           <div className="space-y-4 mb-8">
             {displayedData.length > 0 ? (
