@@ -32,7 +32,7 @@ export default function Navbar() {
               <div className="w-8 h-8 bg-[#3B82F6] rounded-lg flex items-center justify-center">
                 <span className="text-white">📚</span>
               </div>
-              <span className="text-gray-900">PSMA</span>
+              <span className="text-gray-900">PASMA</span>
             </button>
           </div>
 
