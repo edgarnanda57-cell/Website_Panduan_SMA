@@ -32,7 +32,7 @@ export default function JurusanDetail() {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 pt-16">
         <div className="max-w-4xl mx-auto">
           {/* Back Button */}
           <motion.button
